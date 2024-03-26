@@ -1,5 +1,5 @@
 export const getDays = (year: number, month: number) => {
-  const days: number[] = []
+  const days: Date[] = []
 
   try {
     const count = new Date(year, month, 0).getDate()
@@ -11,15 +11,15 @@ export const getDays = (year: number, month: number) => {
     }
 
     for (let i = 1; i < firstDay; i++) {
-      days.unshift(new Date(year, month - 1, 1 - i).getDate())
+      days.unshift(new Date(year, month - 1, 1 - i))
     }
 
     for (let i = 1; i <= count; i++) {
-      days.push(i)
+      days.push(new Date(year, month - 1, i))
     }
 
     for (let i = 1; i <= 7 - lastDay; i++) {
-      days.push(i)
+      days.push(new Date(year, month, i))
     }
   } catch (err) {
     console.log(err)
