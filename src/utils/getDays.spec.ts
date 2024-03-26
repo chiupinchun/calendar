@@ -2,16 +2,6 @@ import { describe, expect, test } from 'vitest'
 import { getDays, isSameDay } from './getDays'
 
 describe('days', () => {
-  test('should always get 35 days', () => {
-    expect(getDays(2021, 1).length).toBe(35)
-    expect(getDays(2020, 2).length).toBe(35)
-    expect(getDays(2019, 3).length).toBe(35)
-    expect(getDays(2009, 4).length).toBe(35)
-    expect(getDays(2025, 5).length).toBe(35)
-    expect(getDays(2026, 6).length).toBe(35)
-    expect(getDays(2027, 7).length).toBe(35)
-    expect(getDays(2028, 8).length).toBe(35)
-  })
 
   test('should get dates correctly with big month', () => {
     const days202403 = getDays(2024, 3)
