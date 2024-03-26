@@ -2,7 +2,7 @@
 
 1. run `npm i`.
 2. run `npm run build`.
-3. find the site in `/dist`.
+3. find the site in `/docs`.
 4. or you can run `npm run dev` to view the site in dev env.
 
 # How to test
