@@ -33,6 +33,7 @@
   width: 50px;
   height: 36px;
   background-color: white;
+  cursor: pointer;
 }
 
 .day-button:hover {
@@ -41,4 +42,16 @@
 
 .day-button.today {
   background-color: #ffff76;
+}
+
+.day-button.active {
+  background-color: #006edc;
+}
+
+.day-button.none-current-month {
+  color: #757575;
+}
+
+.day-button.none-current-month:hover {
+  cursor: not-allowed;
 }
