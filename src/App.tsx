@@ -7,8 +7,11 @@ interface Props { }
 const Page: FC<Props> = () => {
   return (
     <>
-      <h1>task 1</h1>
-      <Calender />
+      <h2>Task 1</h2>
+      <Calender fixMonth={true} />
+      <div style={{ height: '50px' }}></div>
+      <h2>Task 2</h2>
+      <Calender fixMonth={false} />
     </>
   )
 }
