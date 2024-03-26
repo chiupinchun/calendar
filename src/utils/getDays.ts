@@ -27,3 +27,18 @@ export const getDays = (year: number, month: number) => {
 
   return days
 }
+
+export const isSameDay = (...dates: Date[]) => {
+  if (!dates.length) { return false }
+
+  const year = dates[0]?.getFullYear()
+  const month = dates[0]?.getMonth()
+  const day = dates[0]?.getDate()
+
+  return dates.every(
+    date => date
+      && date.getFullYear() === year
+      && date.getMonth() === month
+      && date.getDate() === day
+  )
+}

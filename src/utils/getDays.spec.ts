@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { getDays } from './getDays'
+import { getDays, isSameDay } from './getDays'
 
 describe('days', () => {
   test('should always get 35 days', () => {
@@ -54,8 +54,32 @@ describe('days', () => {
     expect(days202402).toEqual(expection)
   })
 
-  test('should catch unexpection when recieve invalid params', () => {
+  test('should catch unexpection', () => {
     expect(getDays(-1, 9999999999999)).toEqual([])
     expect(getDays(Infinity, NaN)).toEqual([])
+  })
+})
+
+describe('isSameDay', () => {
+  test('should check today correctly', () => {
+    expect(isSameDay(
+      new Date(), new Date()
+    )).toBe(true)
+  })
+
+  test('should check same day correctly', () => {
+    expect(isSameDay(
+      new Date(2024, 3, 26), new Date(2024, 3, 26)
+    )).toBe(true)
+  })
+
+  test('should check different day correctly', () => {
+    expect(isSameDay(
+      new Date(2024, 3, 26), new Date(2024, 3, 27)
+    )).toBe(false)
+  })
+
+  test('should catch unexpection', () => {
+    expect(isSameDay(new Date(Infinity, NaN, -1), new Date(50000, 6000, 300))).toEqual(false)
   })
 })
