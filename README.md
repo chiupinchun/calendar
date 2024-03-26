@@ -1,3 +1,14 @@
+# How to build
+
+1. run `npm i`.
+2. run `npm run build`.
+3. find the site in `/dist`.
+4. or you can run `npm run dev` to view the site in dev env.
+
+# How to test
+
+1. run `npm test`
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
